@@ -1,0 +1,349 @@
+$GROBAL_COLOR_RED:#ff3636;
+$GROBAL_COLOR_BLUE:#227fff;
+$GROBAL_COLOR_GREEN:#01c764;
+$GROBAL_COLOR_SKY:skyblue;
+$GROBAL_COLOR_ORANGE:orange;
+$GROBAL_COLOR_BLACK:black;
+$GROBAL_COLOR_WHITE:white;
+$GROBAL_COLOR_GRAY:gray;
+$BUTTON_DEFAULT_TXT_COLOR_STATIC:#333;
+$BUTTON_ROLED_TXT_COLOR_STATIC:#fff;
+$BUTTON_DEFAULT_BG_COLOR_STATIC:rgba($GROBAL_COLOR_BLACK, .1);
+$BUTTON_DEFAULT_BG_COLOR_HOVER:rgba($GROBAL_COLOR_BLACK, .2);
+$BUTTON_DEFAULT_BG_COLOR_ACTIVE:rgba($GROBAL_COLOR_BLACK, .3);
+$BUTTON_PRIMARY_BG_COLOR_STATIC:lighten($GROBAL_COLOR_BLUE, 3%);
+$BUTTON_PRIMARY_BG_COLOR_HOVER:lighten($GROBAL_COLOR_BLUE, 13%);
+$BUTTON_PRIMARY_BG_COLOR_ACTIVE:lighten($GROBAL_COLOR_BLUE, 21%);
+$BUTTON_SECONDARY_BG_COLOR_STATIC:rgba($GROBAL_COLOR_WHITE, .8);
+$BUTTON_SECONDARY_BG_COLOR_HOVER:rgba($GROBAL_COLOR_WHITE, .7);
+$BUTTON_SECONDARY_BG_COLOR_ACTIVE:rgba($GROBAL_COLOR_WHITE, .6);
+$BUTTON_NEGATIVE_BG_COLOR_STATIC:rgba($GROBAL_COLOR_BLACK, .8);
+$BUTTON_NEGATIVE_BG_COLOR_HOVER:rgba($GROBAL_COLOR_BLACK, .7);
+$BUTTON_NEGATIVE_BG_COLOR_ACTIVE:rgba($GROBAL_COLOR_BLACK, .6);
+$BUTTON_ERROR_BG_COLOR_STATIC:lighten($GROBAL_COLOR_RED, 3%);
+$BUTTON_ERROR_BG_COLOR_HOVER:lighten($GROBAL_COLOR_RED, 13%);
+$BUTTON_ERROR_BG_COLOR_ACTIVE:lighten($GROBAL_COLOR_RED, 21%);
+$BUTTON_SUCC_BG_COLOR_STATIC:lighten($GROBAL_COLOR_GREEN, 3%);
+$BUTTON_SUCC_BG_COLOR_HOVER:lighten($GROBAL_COLOR_GREEN, 13%);
+$BUTTON_SUCC_BG_COLOR_ACTIVE:lighten($GROBAL_COLOR_GREEN, 21%);
+$BUTTON_DEFAULT_BORDER_RADIUS:.3em;
+$INPUT_DEFAULT_TXT_COLOR_STATIC:#333;
+$INPUT_ROLED_TXT_COLOR_STATIC:#fff;
+$INPUT_DEFAULT_BG_COLOR_STATIC:rgba($GROBAL_COLOR_BLACK, 0);
+$INPUT_DEFAULT_BG_COLOR_HOVER:rgba($GROBAL_COLOR_BLACK, .2);
+$INPUT_DEFAULT_BG_COLOR_ACTIVE:rgba($GROBAL_COLOR_BLACK, .3);
+$INPUT_DEFAULT_BORDER_RADIUS:$BUTTON_DEFAULT_BORDER_RADIUS;
+$MAIN-BACKGROUND-COLOR:white;
+$MAIN-TERTIARY-COLOR:#333;
+@mixin dont-select() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin text-truncate() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin de-aparnc() {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+@mixin backface-hidden() {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+div,
+ul,
+backquote,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+    overflow: visible;
+    vertical-align: inherit
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+small {
+    font-size: .5em;
+}
+
+a {
+    -webkit-text-decoration-skip: objects;
+}
+
+a:active,
+a:hover {
+    outline: none;
+}
+
+img {
+    border-style: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+::-moz-selection {
+    background-color: #b3d4fc;
+    color: #000;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: #b3d4fc;
+    color: #000;
+    text-shadow: none;
+}
+
+html {
+    box-sizing: border-box;
+    overflow-y: scroll;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, sans-serif;
+    font-size: 21px;
+}
+
+[lang]:lang(ja) {
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+}
+
+[lang]:lang(ko) {
+    font-family: "HY Gulim", "MalgunGothic", "HY Dotum", "Lexi Gulim", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+}
+
+[lang]:lang(zh-CN) {
+    font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+}
+
+body {
+    line-height: 1.47059;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $MAIN-BACKGROUND-COLOR;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 300;
+    margin: .5em 0 0 0;
+    @media screen and (max-width: 55rem) {
+        font-size: 2em;
+    }
+}
+
+h2 {
+    font-size: 1em;
+    font-weight: 600;
+    border-bottom: solid 1px $MAIN-TERTIARY-COLOR;
+    padding: .5em 0;
+    margin: 1em 0 .5em 0;
+    @media screen and (max-width: 55rem) {
+        font-size: 1.3em;
+    }
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 1em 0 .5em 0;
+    text-transform: uppercase;
+}
+
+.btn {
+    @include backface-hidden();
+    font-size: .8em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $BUTTON_DEFAULT_TXT_COLOR_STATIC;
+    box-shadow: inset 0 0 0 1px rgba($BUTTON_DEFAULT_TXT_COLOR_STATIC, .1);
+    background-color: $BUTTON_DEFAULT_BG_COLOR_STATIC;
+    border-radius: $BUTTON_DEFAULT_BORDER_RADIUS;
+    padding: .2em .5em;
+    transition: transform .1s ease;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: $BUTTON_DEFAULT_BG_COLOR_HOVER;
+}
+
+.btn:active {
+    transform: scale(.98);
+    background-color: $BUTTON_DEFAULT_BG_COLOR_ACTIVE;
+}
+
+.btn--primary {
+    color: $BUTTON_ROLED_TXT_COLOR_STATIC;
+    background-color: $BUTTON_PRIMARY_BG_COLOR_STATIC;
+    &:hover {
+        background-color: $BUTTON_PRIMARY_BG_COLOR_HOVER;
+    }
+    &:active {
+        background-color: $BUTTON_PRIMARY_BG_COLOR_ACTIVE;
+    }
+}
+
+.btn--secondary {
+    background-color: $BUTTON_SECONDARY_BG_COLOR_STATIC;
+    &:hover {
+        background-color: $BUTTON_SECONDARY_BG_COLOR_HOVER;
+    }
+    &:active {
+        background-color: $BUTTON_SECONDARY_BG_COLOR_ACTIVE;
+    }
+}
+
+.btn--negative {
+    color: $BUTTON_ROLED_TXT_COLOR_STATIC;
+    background-color: $BUTTON_NEGATIVE_BG_COLOR_STATIC;
+    &:hover {
+        background-color: $BUTTON_NEGATIVE_BG_COLOR_HOVER;
+    }
+    &:active {
+        background-color: $BUTTON_NEGATIVE_BG_COLOR_ACTIVE;
+    }
+}
+
+.btn--error {
+    color: $BUTTON_ROLED_TXT_COLOR_STATIC;
+    background-color: $BUTTON_ERROR_BG_COLOR_STATIC;
+    &:hover {
+        background-color: $BUTTON_ERROR_BG_COLOR_HOVER;
+    }
+    &:active {
+        background-color: $BUTTON_ERROR_BG_COLOR_ACTIVE;
+    }
+}
+
+.btn--success {
+    color: $BUTTON_ROLED_TXT_COLOR_STATIC;
+    background-color: $BUTTON_SUCC_BG_COLOR_STATIC;
+    &:hover {
+        background-color: $BUTTON_SUCC_BG_COLOR_HOVER;
+    }
+    &:active {
+        background-color: $BUTTON_SUCC_BG_COLOR_ACTIVE;
+    }
+}
+
+.btn--primary {
+    color: $BUTTON_ROLED_TXT_COLOR_STATIC;
+    background-color: $BUTTON_PRIMARY_BG_COLOR_STATIC;
+    &:hover {
+        background-color: $BUTTON_PRIMARY_BG_COLOR_HOVER;
+    }
+    &:active {
+        background-color: $BUTTON_PRIMARY_BG_COLOR_ACTIVE;
+    }
+}
+
+.btn-grp {
+    display: inline-flex;
+    .btn,
+    .inpt {
+        border-radius: 0;
+        margin: 0 .5px;
+        &:first-child {
+            border-radius: $BUTTON_DEFAULT_BORDER_RADIUS 0 0 $BUTTON_DEFAULT_BORDER_RADIUS;
+            margin: 0 .5px 0 0;
+        }
+        &:last-child {
+            border-radius: 0 $BUTTON_DEFAULT_BORDER_RADIUS $BUTTON_DEFAULT_BORDER_RADIUS 0;
+            margin: 0 0 0 .5px;
+        }
+    }
+}
+
+.inpt {
+    @include backface-hidden();
+    font-size: .8em;
+    box-shadow: inset 0 0 0 1px rgba($INPUT_DEFAULT_TXT_COLOR_STATIC, .3);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $INPUT_DEFAULT_TXT_COLOR_STATIC;
+    background-color: $INPUT_DEFAULT_BG_COLOR_STATIC;
+    border-radius: $INPUT_DEFAULT_BORDER_RADIUS;
+    padding: .2em .5em;
+    transition: transform .1s ease;
+}
+
+.inpt-grp {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.inpt-grp--label-upside {
+    position: relative;
+    .inpt-grp_label {
+        top: 0;
+        left: 0;
+        display: block;
+    }
+}
+
+.card {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.h--rounded {
+    border-radius: 100vw;
+}
